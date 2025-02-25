@@ -1,0 +1,6 @@
+1. make root
+2. set root title
+3. set root geometry
+4. set root config
+
+5. make entry 

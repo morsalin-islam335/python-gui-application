@@ -1,47 +1,48 @@
 
-import tkinter as tk
 
 
+# implement GUI calculator by using tkinter 
+
+
+import tkinter as tk 
+
+
+expression = ""
+root = None 
+entry = None 
+
+
+def getResult():
+    pass 
+
+
+def buttonPress(value):
+    pass 
+
+def pressBackspace():
+    pass 
 
 
 def main():
-   root = tk.Tk()
-   root.title("Calculator using GUI")
-   root.config(bg="#242c32")
+    global root, entry 
 
-   entry = tk.Entry(root, font=("Arial", 40), bd=10, justify=tk.RIGHT)
+    ###### create a root widget ######
+    root = tk.Tk()
+    root.title("Calculator using GUI")
+    root.config(bg = "#242c32")
+    root.geometry("600x600")
 
-   entry.grid(row = 0, column = 0, columnspan = 4, padx = 40, pady = 40, sticky = "nsew")
+    ########## now works with entry ######
 
-   buttons = [
-    '7', '8', '9', '/',
-    '4', '5', '6', '*',
-    '1', '2', '3', '-',
-    '0', '.', '=', '+'
-]
-   
-   row_val = 1
-   col_val = 0
+    entry = tk.Entry(root, font= ("Arial", 35,), justify = tk.RIGHT)
+    entry.grid(row = 0, column = 0, columnspan = 4, padx = 20, pady = 20, sticky = "nsew")
+    
 
-   for button in buttons:
-       pass 
-   
-
-   tk.Button(
-       root,
-       text = "Clear",
-       padx =10,
-       bg="red",
-       fg = "black",
-       row = row_val,
-
-       column = col_val
-   )
-
-   root.mainloop()
+    root.mainloop()
 
 
 
 
 if __name__ == "__main__":
     main()
+
