@@ -28,9 +28,11 @@ root.title("Colorful Calculator")
 root.geometry("400x500")
 root.config(bg="#282c35")  
 
-entry = tk.Entry(root, width=20, font=('Arial', 20), justify=tk.RIGHT, bd=10)
-entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10, ipady=20)  
+# entry = tk.Entry(root, width=50, font=('Arial', 20), justify=tk.RIGHT, bd=10)
+# entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10, ipady=20)  
 
+entry = tk.Entry(root, font=('Arial', 20), justify=tk.RIGHT, bd=10)
+entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10, ipady=20, sticky="nsew")
 # Buttons
 buttons = [
     '7', '8', '9', '/',
@@ -60,11 +62,11 @@ tk.Button(
 ).grid(row=row_val, column=col_val, sticky="nsew")
 col_val += 1
 tk.Button(
-    root, text='⌫', padx=20, pady=20, font=('Arial', 16),
+    root, text='Del', padx=20, pady=20, font=('Arial', 16),
     command=backspace, bg="#ff6b6b", fg="#282c35"
 ).grid(row=row_val, column=col_val, sticky="nsew")
 
-for i in range(1, 5):
+for i in range(0, 5):
     root.grid_rowconfigure(i, weight=1)
     root.grid_columnconfigure(i, weight=1)
 
