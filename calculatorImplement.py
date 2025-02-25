@@ -5,24 +5,20 @@ import tkinter as tk
 
 
 def main():
+   root = tk.Tk()
+   root.title("Calculator using GUI")
+   root.config(bg="#242c32")
 
-    root = tk.Tk()
-    root.title("Calculator using Tkinter")
-    root.geometry("400x500")
-    root.config(bg="#282c35")
+   entry = tk.Entry(root, font=("Arial", 40), bd=10, justify=tk.RIGHT)
 
-    # make an entry
-    
-    entry = tk.Entry(root,font=("Arial", 40),bd=10, justify=tk.RIGHT)
-    
+   entry.grid(row = 0, column = 0, columnspan = 4, padx = 40, pady = 40, sticky = "nsew")
 
-
-    # now make grid for that entry
-    entry.grid(row = 0, column = 0)
+   buttons = [
+       
+   ]
 
 
-
-    root.mainloop()
+   root.mainloop()
 
 
 
