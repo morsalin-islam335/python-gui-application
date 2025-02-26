@@ -112,7 +112,15 @@ class Calculator:
 
 
 
-
+    def handleKeyPress(self, event):
+        key = event.char
+        if key.isdigit() or key in ['.', '+', '-', '*', '/', '^', '(', ')']:
+            self.handleClick(key)
+        elif key == '\r':  # Enter key
+            self.calculation()
+        elif key == '\x08':  # Backspace key
+            self.pressBackspace()
+    
 
     
 
@@ -157,6 +165,7 @@ class Calculator:
             calculatorCell = tk.Button(
                 self.root,
                 command=handleClickCell,
+                
                 padx=20, pady=20,
                 font=("Arial", 16),
                 text=button,
@@ -176,6 +185,9 @@ class Calculator:
             self.root.rowconfigure(i,weight=1)
             self.root.columnconfigure(i, weight=1)
             
+
+        
+        self.root.bind("<KeyPress>",self.handleKeyPress)
 
         self.root.mainloop()
 
