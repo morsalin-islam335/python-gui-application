@@ -142,7 +142,7 @@ class Calculator:
         '7', '8', '9', '/', 'sin',
         '4', '5', '6', '*', 'cos',
         '1', '2', '3', '-', 'tan',
-        '0', '00', '.', '+', '%',
+        '0', '00', '.', '+', 'MOD',
          "Clear", "Del", "="
         ]
 
@@ -169,7 +169,7 @@ class Calculator:
                 padx=20, pady=20,
                 font=("Arial", 16),
                 text=button,
-                bg="lightblue" if button not in ["Clear", "Del"] else "red",
+                bg="tomato" if button == "Del" else "red" if button == "Clear" else "lightblue",
                 fg="black"
             )
 
