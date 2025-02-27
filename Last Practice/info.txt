@@ -3,10 +3,15 @@ entryBg= "#34495E"
 entryfg = "white"
 button = "lightblue, tomato, red"
 
+'.', '+', '-', '*', '/', '^', '(', ')'
 
-
-root    ^        sq     (      )   sin
-7       8        9      /   cos
-4       5        6      *   tan
-1       2        3      -   Mod
-0       00       .      +
+     self.buttons = [
+        '√', '^', '(', ')', 'x²',
+        '7', '8', '9', '/', 'sin',
+        '4', '5', '6', '*', 'cos',
+        '1', '2', '3', '-', 'tan',
+        '0', '00', '.', '+', 'MOD',
+         "Clear", "Del", "="
+        ]
+\x08" => backspace
+\r =>   enter
